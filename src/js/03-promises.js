@@ -41,13 +41,15 @@ function onPromiseCreate(e) {
           `✅ Fulfilled promise ${position} in ${delay}ms`,
           options
         );
-      })
+       })
+     
       .catch(({ position, delay }) => {
         Notify.failure(
           `❌ Rejected promise ${position} in ${delay}ms`,
           options
         );
-      });
+        });
+        inputDelay += inputStep;
     e.currentTarget.reset();
   }
 }
